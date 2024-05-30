@@ -1,0 +1,9 @@
+revisi wallet app:
+-baikin date(tanggal)
+-tambah fitur delete, edit (category income)
+-tambah fitur edit, hapus income, outcome
+-antisipasi jika category kosong, maka gabisa buat catatan income/outcome
+-refactor the code(rapihin, tambah res.status, title web)
+-revisi code menjadi mvc concept
+-error handling masing masing route
+-tambahkan popup 'anda yakin?' ketika user ingin delete

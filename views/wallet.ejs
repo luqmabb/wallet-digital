@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% if (messages.error && messages.error.length> 0) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= messages.error %>
+        </div>
+        <% } %>
+
+            <h2>Hello, <%= name %></h2>
+            <p>Balance : <%= balance %></p>
+            <p>Total of Income : <%= totalIncome %></p>
+            <p>Total of Outcome : <%= totalOutcome %></p>
+
+
+            <h3>income List</h3>
+            <% if (!incomeList) { %>
+
+                <p>no income yet</p>
+
+                <% } else { %>
+
+                    <ol>
+                        <% for( let index=0; index < incomeList.length; index++ ) { %>
+                            <li>
+                                <h4>
+                                    <%= incomeList[index].note %>
+                                </h4>
+                                <p>amount = <%= incomeList[index].amount %>
+                                </p>
+                                <p>category = <%= incomeList[index].categoryIncome.nameCategory %>
+                                </p>
+                            </li>
+                            <% } %>
+                    </ol>
+
+                    <% } %>
+
+                        <h3>outcome List</h3>
+                        <% if (!outcomeList) { %>
+
+                            <p>no income yet</p>
+
+                            <% } else { %>
+
+                                <ol>
+                                    <% for( let index=0; index < outcomeList.length; index++ ) { %>
+                                        <li>
+                                            <h4>
+                                                <%= outcomeList[index].note %>
+                                            </h4>
+                                            <p>amount = <%= outcomeList[index].amount %>
+                                            </p>
+                                            <p>category = <%= outcomeList[index].categoryOutcome.nameCategory %>
+                                            </p>
+                                        </li>
+                                        <% } %>
+                                </ol>
+
+                                <% } %>
+                                    <button>
+                                        <a href="/addIncome/<%= id %>">add income</a>
+                                    </button>
+                                    <button>
+                                        <a href="/addOutcome/<%= id %>">add outcome</a>
+                                    </button>
+                                    <a href="/logout">
+                                        <p>logout</p>
+                                    </a>
+</body>
+
+</html>

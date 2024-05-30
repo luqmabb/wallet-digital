@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>edit income category</h1>
+    <p>edit id income category = <%= idCategory %></p>
+    <p>edit id User = <%= idUser %></p>
+    <form action="/editCategoryIncome/<%= idCategory %>/<%= idUser %>" method="post">
+        <label for="name">name</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">edit</button>
+    </form>
+</body>
+</html>
